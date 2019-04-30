@@ -1,64 +1,24 @@
-.error{
-	color: red;
-	border-color: red;
-	border: 2px;
-}
-
-.hidden {
-	display: none;
-}
-
-.valid {
-	border: 1px solid #00FF00;
-}
-
-.invalid {
-	border: 1px solid red;
-}
-
-* {
-	font-family: Ubuntu;
-	font-size: 14px;
-}
-
 body {
-	margin-top: 10px;
-	background-color: #F7F7F7;
-	margin-bottom: 10px;
+	background-color: #f7f7f7;
+	padding: 10px;
 }
 
-body h1, h2, h3, h4 {
-	color: maroon;
-	margin-top: 25px;
-	margin-bottom: 50px;
-	text-decoration: none;
+.space {
+	height: 40px;
 }
 
-.title b{
-	background-color: maroon;
-	color: white;
-	padding: 5px;
+input {
+	width: 85%;
+	height: 8%;
+	border: none;
 }
 
-th{
-	text-align: center;
+.input-group-text {
+	background-color: #fff
 }
 
-input[type='checkbox'] {
-   
-    width:15px;
-    height:15px;
-    background:white;
-    border-radius:2px;
-    border:1px solid #555;
+@media screen and (max-width: 300px) {
+  .hidden {
+    display: none;
+  }
 }
-
-.container {
-	border: 1px solid maroon;
-	border-radius: 10px;
-	padding: 20px;
-	background-color: #E4E4E4;
-}
-
-
-
