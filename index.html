@@ -1,40 +1,55 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>JQuery form validation</title>
-		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
-		<link rel="stylesheet" type="text/css" href="css/styles.css" />
-		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-		<script src="js/javascript.js"></script>
-	</head>
-	<body>
-		<div class="container">
-			<form id="form">
-				<div class="form-group">
-					<label for="name">Name *</label>
-					<input type="text" class="form-control" id="name" aria-describedby="nameHelp" placeholder="Enter name">
-					<small id="nameError" class="text-danger">Error Message</small>
-				</div>
-				<div class="form-group">
-					<label for="address">Address</label>
-					<input type="text" class="form-control" id="address" aria-describedby="addressHelp" placeholder="Enter address">
-					<small id="addressError" class="text-danger">Error Message</small>
-				</div>
-				<div class="form-group">
-					<label for="email">Email address</label>
-					<input type="text" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
-					<small id="emailError" class="text-danger">Error Message</small>
-				</div>
-				<div class="form-group">
-					<label for="phone">Phone</label>
-					<input type="text" class="form-control" id="phone" placeholder="Phone">
-					<small id="phoneError" class="text-danger">Error Message</small>
-				</div>
-				<button type="submit" class="btn btn-primary">Submit</button>
-			</form>
+<head>
+	<title>Google</title>
+	<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+	<div class="head">
+		<ul class=right>
+			<li><a href="#">Gmail</a></li>
+			<li><a href="#">Images</a></li>
+			<li><a href="#"><img src="images/grid.png" id="apps"></a></li>
+			<li><a href="#" class="btn" id="btn-blue">Sign in</a></li>
+		</ul>
+	</div>
+	<div class="space"></div>
+	<main>
+	<img src="images/google_logo.png" id="logo" />
+
+	<form>
+		<div class="searchbar">
+			<input type="text" name="search" id="search">
 		</div>
-		
-	</body>
+			<img id="voice" src="images/mic.png" />
+
+		<div class="buttons">
+			<button type="submit" class="btn" value="search">Google Search</button>
+			<button type="submit" class="btn" value="lucky">I'm Feeling Lucky</button>
+		</div>
+
+		<div class="lang">
+			Google offered in: <a href="#">नेपाली</a>
+		</div>
+
+	</form>
+
+	</main>
+	<footer>
+		<ul>
+			<li><a href="#" class="bottom">Nepal</a></li>
+		</ul>
+		<br />
+		<ul class="left">
+			<li><a href="#" class="bottom">Advertising</a></li>
+			<li><a href="#" class="bottom">Business</a></li>
+			<li><a href="#" class="bottom">About</a></li>
+		</ul>
+		<ul class=right>
+			<li><a href="#" class="bottom">Privacy</a></li>
+			<li><a href="#" class="bottom">Terms</a></li>
+			<li><a href="#" class="bottom">Settings</a></li>
+		</ul>
+	</footer>
+</body>
 </html>
