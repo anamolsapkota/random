@@ -1,0 +1,46 @@
+nav {
+    position: fixed;
+    top: 0;
+    height: 60px;
+    vertical-align: middle;
+}
+
+nav img {
+    height: 100px;
+    width: 100px;
+}
+
+body {
+    background-color: #f8f8f8;
+    width: 100% !important
+}
+
+.header {
+    background-color: #ffffff;
+    height: 75px;
+}
+
+hr {
+    width: 100%;
+    color: #E0E0E0;
+}
+
+.card {
+    text-align: center;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.btn-success {
+    background-color: #00835D;
+}
+
+.forgot {
+    color: #2F4EA5;
+}
+
+.check {
+    margin-left: 20px;
+}
