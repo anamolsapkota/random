@@ -1,23 +1,21 @@
 nav {
     position: fixed;
-    top: 0;
-    height: 60px;
+/*    top: 0;*/
     vertical-align: middle;
+    z-index: 999;
 }
 
 nav img {
-    height: 100px;
     width: 100px;
 }
 
 body {
     background-color: #f8f8f8;
-    width: 100% !important
+    max-width: 100% !important;
 }
 
 .header {
     background-color: #ffffff;
-    height: 75px;
 }
 
 hr {
@@ -43,4 +41,9 @@ hr {
 
 .check {
     margin-left: 20px;
+}
+
+.btn-outline-secondary:hover {
+    background-color: #ffffff;
+    color: #868686
 }
