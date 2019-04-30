@@ -1,55 +1,1134 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Google</title>
-	<link rel="stylesheet" href="css/styles.css">
+	<title>Form Validation Assignment</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+	<link rel="stylesheet" type="text/css" href="css/styles.css" />
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<script src="js/javascript.js"></script>
 </head>
 <body>
-	<div class="head">
-		<ul class=right>
-			<li><a href="#">Gmail</a></li>
-			<li><a href="#">Images</a></li>
-			<li><a href="#"><img src="images/grid.png" id="apps"></a></li>
-			<li><a href="#" class="btn" id="btn-blue">Sign in</a></li>
-		</ul>
-	</div>
-	<div class="space"></div>
-	<main>
-	<img src="images/google_logo.png" id="logo" />
+	<div class="container">
+		<h4 class="title text-right"><b>FORM VALIDATION &mdash; HOMEOWNERS INSURANCE QUOTE FORM</b></h3>
+		<form>
+			<div class="form-group row">
+				<label for="name" class="col-sm-2 col-form-label ">Name:</label>
+				<div class="col-sm-3">
+					<input type="text" class="form-control " id="name" value="">
+					<span class="text-danger error hidden" id="nameError">Error</span>
+				</div>
+				<label for="dob1" class="col-sm-1 col-form-label text-right">DOB:</label>
+				<div class="col-sm-3">
+					<input type="date" class="form-control" id="dob1" value="">
+					<span class="text-danger error hidden" id="dob1Error">Error</span>
+				</div>
+				<label for="ss1" class="col-sm-1 col-form-label text-right">SS#:</label>
+				<div class="col-sm-2">
+					<input type="text" class="form-control" id="ss1" value="">
+					<span class="text-danger error hidden" id="ss1Error">Error</span>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label for="spouse" class="col-sm-2 col-form-label "> Spouse's Name:</label>
+				<div class="col-sm-3">
+					<input type="text" class="form-control " id="spouse" value="">
+					<span class="text-danger error hidden" id="spouseError">Error</span>
+				</div>
+				<label for="dob2" class="col-sm-1 col-form-label text-right">DOB:</label>
+				<div class="col-sm-3">
+					<input type="date" class="form-control" id="dob2" value="">
+					<span class="text-danger error hidden" id="dob2Error">Error</span>
+				</div>
+				<label for="ss2" class="col-sm-1 col-form-label text-right">SS#:</label>
+				<div class="col-sm-2">
+					<input type="text" class="form-control" id="ss2" value="">
+					<span class="text-danger error hidden" id="ss2Error">Error</span>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label for="address" class="col-sm-2 col-form-label ">Address:</label>
+				<div class="col-sm-3">
+					<input type="text" class="form-control" id="address" value="">
+					<span class="text-danger error hidden" id="addressError">Error</span>
+				</div>
+				<label for="city" class="col-sm-1 col-form-label text-right">City:</label>
+				<div class="col-sm-2">
+					<input type="text" class="form-control" id="city" value="">
+					<span class="text-danger error hidden" id="cityError">Error</span>
+				</div>
+				<label for="state" class="col-sm-1 col-form-label text-right">State:</label>
+				<div class="col-sm-1">
+					<input type="text" class="form-control" id="state" value="">
+					<span class="text-danger error hidden" id="stateError">Error</span>
+				</div>
+				<label for="zip" class="col-sm-1 col-form-label text-right">Zip:</label>
+				<div class="col-sm-1">
+					<input type="number" min=0 class="form-control" id="zip" value="">
+					<span class="text-danger error hidden" id="zipError">Error</span>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label for="property_address" class="col-sm-5 col-form-label">Property Address (if different than mailing address): </label>
+				<div class="col-sm-7">
+					<input type="text" class="form-control" id="property_address" value="">
+					<span class="text-danger error hidden" id="property_addressError">Error</span>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label for="phone" class="col-sm-2 col-form-label "> Phone Numbers: </label>
+				<label for="phoneHome" class="col-sm-1" class="col-form-label"> Home:</label>
 
-	<form>
-		<div class="searchbar">
-			<input type="text" name="search" id="search">
+				<div class="col-sm-2">
+					<input type="number" min=0 class="form-control" id="phoneHome" value="">
+					<span class="text-danger error hidden" id="phoneHomeError">Error</span>
+				</div>
+				<label for="cellHome" class="col-sm-1 col-form-label "> Cell:</label>
+				<div class="col-sm-2">
+					<input type="number" min=0 class="form-control" id="cellHome" value="">
+					<span class="text-danger error hidden" id="cellHomeError">Error</span>
+				</div>
+				<label for="workHome" class="col-sm-1 col-form-label ">Work:</label>
+				<div class="col-sm-2">
+					<input type="number" min=0 class="form-control" id="workHome" value="">
+					<span class="text-danger error hidden" id="workHomeError">Error</span>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label for="name" class="col-sm-2 col-form-label"> Best Time To Call:</label>
+				<div class="form-check form-check-inline">
+					<input class="form-check-input" type="checkbox" id="best_time_morning" value="best_time_morning">
+					<label class="form-check-label" for="best_time_morning"> Morning </label>
+				</div>
+				<div class="form-check form-check-inline">
+					<input class="form-check-input" type="checkbox" id="best_time_afternoon" value="best_time_afternoon">
+					<label class="form-check-label" for="best_time_afternoon"> Afternoon</label>
+				</div>
+				<div class="form-check form-check-inline">
+					<input class="form-check-input" type="checkbox" id="best_time_evening" value="best_time_evening">
+					<label class="form-check-label" for="best_time_evening"> Evening </label>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label for="name" class="col-sm-2 col-form-label">Email Address:</label>
+				<div class="col-sm-5">
+					<input type="email" class="form-control " id="email" value="">
+					<span class="text-danger error hidden" id="emailError">Error</span>
+				</div>
+			</div>
+			<hr>
+			<div class="title">
+				<h6> <b> CURRENT POLICY INFORMATION </b> </h6>
+			</div>
+			<div class="form-group row">
+				<label for="ins_company" class="col-sm-2 col-form-label">Insurance Company: </label>
+				<div class="col-sm-4">
+					<input type="text" class="form-control" id="ins_company" value="">
+					<span class="text-danger error hidden" id="ins_companyError">Error</span>
+				</div>
+				<label for="ins_exp" class="col-sm-2 col-form-label">Expiration Date: </label>
+				<div class="col-sm-4">
+					<input type="date" class="form-control" id="ins_exp" value="">
+					<span class="text-danger error hidden" id="ins_expError">Error</span>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label for="ins_dwell" class="col-sm-2 col-form-label">Dwelling Limit: </label>
+				<div class="col-sm-2">
+					<input type="number" min=0 class="form-control " id="ins_dwell" value="">
+					<span class="text-danger error hidden" id="ins_dwellError">Error</span>
+				</div>
+				<label for="ins_other" class="col-sm-2 col-form-label">Other Structures Limit: </label>
+				<div class="col-sm-2">
+					<input type="number" min=0 class="form-control" id="ins_other" value="">
+					<span class="text-danger error hidden" id="ins_otherError">Error</span>
+				</div>
+				<label for="ins_personal_pro" class="col-sm-2 col-form-label">Personal Property Limit: </label>
+				<div class="col-sm-2">
+					<input type="number" min=0 class="form-control" id="ins_personal_pro" value="">
+					<span class="text-danger error hidden" id="ins_personal_proError">Error</span>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label for="ins_loss" class="col-sm-2 col-form-label">Loss of Use Limit: </label>
+				<div class="col-sm-2">
+					<input type="number" min=0 class="form-control" id="ins_loss" value="">
+					<span class="text-danger error hidden" id="ins_lossError">Error</span>
+				</div>
+				<label for="ins_personal_lia" class="col-sm-2 col-form-label">Personal Liability Limit: </label>
+				<div class="col-sm-2">
+					<input type="number" min=0 class="form-control" id="ins_personal_lia" value="">
+					<span class="text-danger error hidden" id="ins_personal_liaError">Error</span>
+				</div>
+				<label for="ins_medi" class="col-sm-2 col-form-label">Medical Pay Limit: </label>
+				<div class="col-sm-2">
+					<input type="number" min=0 class="form-control" id="ins_medi" value="">
+					<span class="text-danger error hidden" id="ins_mediError">Error</span>
+				</div>
+				<label for="ins_deduct" class="col-sm-2 col-form-label">Deductible: </label>
+				<div class="col-sm-4">
+					<input type="number" min=0 class="form-control " id="ins_deduct" value="">
+					<span class="text-danger error hidden" id="ins_deductError">Error</span>
+				</div>
+			</div>
+			<hr>
+			<div class="title">
+				<h6> <b> HOME INFORMATION </b> </h6>
+			</div>
+			<div class="form-group row">
+				<label for="home_date" class="col-sm-2 col-form-label ">Date Purchased:</label>
+				<div class="col-sm-2">
+					<input type="date" class="form-control" id="home_date" value="">
+				</div>
+
+				<label for="home" class="col-sm-2 col-form-label ">Home is:</label>
+
+				<div class="form-check form-check-inline text-right">
+					<input class="form-check-input" type="checkbox" id="home_chk_primary" value="option1">
+					<label class="form-check-label" for="home_chk_primary">Primary Residence</label>
+				</div>
+				<div class="form-check form-check-inline">
+					<input class="form-check-input" type="checkbox" id="home_chk_secondary" value="">
+					<label class="form-check-label" for="home_chk_secondary"> Secondary Residence </label>
+				</div>
+				<div class="form-check form-check-inline">
+					<input class="form-check-input" type="checkbox" id="home_chk_property" value="option3">
+					<label class="form-check-label" for="home_chk_property"> Rental Property</label>
+				</div>
+			</div>
+			<div class="form-group row">
+				<div class="col-sm-6">
+					<label for="home_purchase" class="col-sm-12 col-form-label "> *Was home purcased as foreclosure/short sale within past 12 months?</label>
+				</div>
+
+				<div class="form-check form-check-inline">
+					<input class="form-check-input" type="radio" name="home_purchase" id="home_purchase" value="">
+					<label class="form-check-label" for="home_purchase">Yes</label>
+				</div>
+				<div class="form-check form-check-inline">
+					<input class="form-check-input" type="radio" name="home_purchase" id="home_purchase" value="">
+					<label class="form-check-label" for="home_purchase">No</label>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label for="mortgagee" class="col-sm-2 col-form-label">Mortgagee: </label>
+				<div class="col-sm-10">
+					<input type="text" class="form-control " id="mortgagee" value="">
+					<span class="text-danger error hidden" id="mortgageeError">Error</span>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label for="mortgagee_2" class="col-sm-2 col-form-label">2nd Mortgagee: </label>
+				<div class="col-sm-10">
+					<input type="text" class="form-control " id="mortgagee_2" value="">
+					<span class="text-danger error hidden" id="mortgagee_2Error">Error</span>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label for="home_ins_esc" class="col-sm-2 col-form-label ">Insurance Escrowed?</label>
+
+
+				<div class="form-check form-check-inline">
+					<input class="form-check-input" type="radio" name="home_ins_esc" id="home_ins_esc" value="option1">
+					<label class="form-check-label" for="home_ins_esc">Yes</label>
+				</div>
+				<div class="form-check form-check-inline">
+					<input class="form-check-input" type="radio" name="home_ins_esc" id="home_ins_esc" value="">
+					<label class="form-check-label" for="home_ins_esc">No</label>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label for="home_town" class="col-sm-3 col-form-label"> Township & County of Property: </label>
+				<div class="col-sm-8">
+					<input type="text" class="form-control" id="home_town" value="">
+					<span class="text-danger error hidden" id="home_townError">Error</span>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label for="home_type" class="col-sm-2 col-form-label ">Is your home a: </label>
+
+
+				<div class="form-check form-check-inline">
+					<input class="form-check-input" type="checkbox" id="home_type_single" value="option1">
+					<label class="form-check-label" for="home_type_single"><b>Single Family Home</b></label>
+				</div>
+				<div class="form-check form-check-inline">
+					<input class="form-check-input" type="checkbox" id="home_type_dup" value="">
+					<label class="form-check-label" for="home_type_dup"><b>Duplex</b></label>
+				</div>
+				<div class="form-check form-check-inline">
+					<input class="form-check-input" type="checkbox" id="home_type_mobile" value="">
+					<label class="form-check-label" for="home_type_mobile"><b>Mobile Home</b></label>
+				</div>
+				<div class="form-check form-check-inline">
+					<input class="form-check-input" type="checkbox" id="home_type_modular" value="">
+					<label class="form-check-label" for="home_type_modular"><b>Modular Home (Pre-Fab)</b></label>
+				</div>
+			</div>
+			<div class="form-group row">
+				<div class="col-sm-2"></div>
+				<div class="form-check form-check-inline">
+					<input class="form-check-input" type="checkbox" id="home_type_multi" value="">
+					<label class="form-check-label" for="home_type_multi"><b>Multi-Family -# of Families:</b></label>
+				</div>
+				<div class="form-check form-check-inline">
+					<input class="form-check-input" type="checkbox" id="home_type_condo" value="">
+					<label class="form-check-label" for="home_type_condo"><b>Condo</b></label>
+				</div>
+				<div class="form-check form-check-inline">
+					<input class="form-check-input" type="checkbox" id="home_type_town" value="">
+					<label class="form-check-label" for="home_type_town"><b>Townhouse</b></label>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label for="home_town_if" class="col-sm-2 col-form-label">If Condo/Townhouse:</label>
+
+
+				<div class="form-check form-check-inline">
+					<input class="form-check-input" type="checkbox" id="home_town_end" value="option1">
+					<label class="form-check-label" for="home_town_end"><b>End Unit</b></label>
+				</div>
+				<div class="form-check form-check-inline">
+					<input class="form-check-input" type="checkbox" id="home_town_center" value="">
+					<label class="form-check-label" for="home_town_center"><b>Center Unit</b></label>
+				</div>
+				<label for="home_town_units" class="col-form-label text-right"># of units between firewalls: <small>(condo/tenant only)</small></label>
+				<input type="number" min=0 class="form-control col-sm-1" id="home_town_units">
+				<span class="text-danger error hidden" id="home_town_unitsError">Error</span>
+			</div>
+			<div class="form-group row">
+				<label for="home_property_ins" class="col-sm-6 col-form-label ">Have you filed any property insurance claims in the past five years? </label>
+
+
+				<div class="form-check form-check-inline">
+					<input class="form-check-input" type="radio" name="home_property_ins" id="home_property_ins" value="option1">
+					<label class="form-check-label" for="home_property_ins">Yes</label>
+				</div>
+				<div class="form-check form-check-inline">
+					<input class="form-check-input" type="radio" name="home_property_ins" id="home_property_ins" value="">
+					<label class="form-check-label" for="home_property_ins">No</label>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label for="home_property_ins_desc" class="col-sm-4 col-form-label ">If yes, please describe below: </label>
+			</div>
+			<div class="form-group row col-sm-10">
+				<div class="col-sm-2"></div>
+				<table id="home_property_ins_desc">
+						<tr>
+							<th>Date</th>
+							<th colspan="3" >Type/Description</th>
+
+							<th>Amt.Paid</th>
+						</tr>
+						<tr>
+							<td><input type="date" class="form-control" id="home_ins_date1" name="insurance_claim_date1"></td>
+
+							<td colspan="3"><input class="form-control" type="text" id="home_ins_desp1" name="insurance_claim_desp1"></td>
+
+							<td><input type="number" min=0 class="form-control" id="home_ins_amount1" name="insurance_claim_amount1"></td>
+						</tr>
+						<tr>
+							<td><input type="date" class="form-control" id="home_ins_date2" name="insurance_claim_date2"></td>
+							<td colspan="3"><input type="text" class="form-control" id="home_ins_desp2" name="insurance_claim_desp2"></td>
+
+							<td><input type="number" min=0 class="form-control" id="home_ins_amount2" name="insurance_claim_amount2"></td>
+
+						</tr>
+						<tr>
+							<td><input type="date" class="form-control" id="home_ins_date3" name="insurance_claim_date3"></td>
+							<td colspan="3"><input type="text" class="form-control" id="home_ins_desp3" name="insurance_claim_desp3"></td>
+
+							<td><input type="number" min=0 class="form-control" id="home_ins_amount3" name="insurance_claim_amount3"></td>
+						</tr>
+						<tr>
+							<td><input type="date" class="form-control" id="home_ins_date4" name="insurance_claim_date4"></td>
+							<td colspan="3"><input type="text" class="form-control" id="home_ins_desp4" name="insurance_claim_desp4"></td>
+
+							<td><input type="number" min=0 class="form-control" id="home_ins_amount4" name="insurance_claim_amount4"></td>
+						</tr>
+					</table>
+
+			</div>
+			<hr>
+			<div class="title">
+				<h6> <b> CONSTRUCTION TYPE </b> </h6>
+			</div>
+			<div class="form-group row col-sm-12">
+
+				<div class="col-sm-3 form-check form-check-inline">
+					<input class="form-check-input" type="checkbox" id="cons_wood_w_vinyl" value="option1">
+					<label class="form-check-label" for="cons_wood_w_vinyl"> Wood Frame w/ Vinyl Siding</label>
+				</div>
+				<div class="col-sm-3 form-check form-check-inline">
+					<input class="form-check-input" type="checkbox" id="cons_wood_w_alu" value="">
+					<label class="form-check-label" for="cons_wood_w_alu"> Wood frame w/Aluminium Siding</label>
+				</div>
+				<div class="col-sm-3 form-check form-check-inline">
+					<input class="form-check-input" type="checkbox" id="cons_stucco" value="">
+					<label class="form-check-label" for="cons_stucco"> Stucco</label>
+				</div>
+				<div class="col-sm-3 form-check form-check-inline">
+					<input class="form-check-input" type="checkbox" id="cons_solid_brick" value="">
+					<label class="form-check-label" for="cons_solid_brick"> Solid Brick</label>
+				</div>
+				<div class="col-sm-3 form-check form-check-inline">
+					<input class="form-check-input" type="checkbox" id="cons_brick_veneer" value="">
+					<label class="form-check-label" for="cons_brick_veneer"> Brick Veneer </label>
+				</div>
+				<div class="col-sm-3 form-check form-check-inline">
+					<input class="form-check-input" type="checkbox" id="cons_other" value="">
+					<label class="form-check-label" for="cons_other"> Other (Please Specify)</label>
+				</div>
+				<div class="col-sm-3 form-check form-check-inline">
+					<input class="form-check-input" type="checkbox" id="cons_solid_stone" value="">
+					<label class="form-check-label" for="cons_solid_stone"> Solid Stone</label>
+				</div>
+				<div class="col-sm-3 form-check form-check-inline">
+					<input class="form-check-input" type="checkbox" id="cons_stone_veneer" value="">
+					<label class="form-check-label" for="cons_stone_veneer"> Stone Veneer</label>
+				</div>
+				<div class="col-sm-3 form-check form-check-inline">
+					<input class="form-control" type="text" id="cons_other_specify" value="">
+				</div>
+				<div class="col-sm-3 form-check form-check-inline">
+					<input class="form-check-input" type="checkbox" id="cons_wood_slide" value="">
+					<label class="form-check-label" for="cons_wood_slide"> Wood Siding</label>
+				</div>
+				<div class="col-sm-6 form-check form-check-inline">
+					<input class="form-check-input" type="checkbox" id="cons_fire_resist" value="">
+					<label class="form-check-label" for="cons_fire_resist"> Fire Resistive (Steel Frame)</label>
+				</div>
+				<div class="col-sm-3 form-check form-check-inline">
+					<input class="form-check-input" type="checkbox" id="cons_log_slide" value="">
+					<label class="form-check-label" for="cons_log_slide"> Log Siding</label>
+				</div>
+				<div class="col-sm-3 form-check form-check-inline">
+					<input class="form-check-input" type="checkbox" id="cons_solid_log" value="">
+					<label class="form-check-label" for="cons_solid_log"> Solid Log</label>
+				</div>
+			</div>
+			<hr>
+			<div class="title">
+				<h6> <b> PROTECTION CLASS </b> </h6>
+			</div>
+			<div class="form-group row">
+				<label for="prot_ft_fire" class="col-sm-3 col-form-label">Feet to Nearest Fire Hydrant: </label>
+				<div class="col-sm-1">
+					<input type="number" min=0 class="form-control " id="prot_ft_fire" value="">
+				</div>
+				<label for="prot_mile_fi_st" class="col-sm-3 col-form-label">Miles to Nearest Fire Station: </label>
+				<div class="col-sm-1">
+					<input type="number" min=0 class="form-control " id="prot_mile_fi_st" value="">
+				</div>
+				<label for="prot_fire_dis" class="col-sm-2 col-form-label">Fire District: </label>
+				<div class="col-sm-2">
+					<input type="text" class="form-control " id="prot_fire_dis" value="">
+				</div>
+			</div>
+			<hr>
+			<div class="title">
+				<h6> <b> DWELLING INFORMATION </b> </h6>
+			</div>
+			<div class="form-group row">
+				<label for="name" class="col-sm-2 col-form-label">Year Dwelling Built: </label>
+				<div class="col-sm-2">
+					<input type="number" min=0 class="form-control" id="dwell_year" value="">
+				</div>
+				<label for="name" class="col-sm-2 col-form-label">Square Footage: </label>
+				<div class="col-sm-2">
+					<input type="number" min=0 class="form-control" id="dwell_sq" value="">
+				</div>
+				<label for="name" class="col-sm-2 col-form-label"># of Stories: </label>
+				<div class="col-sm-2">
+					<input type="number" min=0 class="form-control" id="dwell_stories" value="">
+				</div>
+			</div>
+			<div class="form-group row">
+				<label for="name" class="col-sm-2 col-form-label">Types of Dwelling: </label>
+				<div class="col-sm-4">
+					<input type="text" class="form-control" id="dwell_type" value="">
+				</div>
+				<div class="col-sm-6">
+					<small>(ex: cape cod, ranch, townhouse end unit, split-level, etc.)</small>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label for="name" class="col-sm-3 col-form-label">Construction of Walls & Ceilings: </label>
+				<div class="form-check form-check-inline">
+					<input class="form-check-input" type="radio" name="dwell_cons" id="dwell_cons" value="dwell_cons">
+					<label class="form-check-label" for="dwell_cons">Drywall</label>
+				</div>
+				<div class="form-check form-check-inline">
+					<input class="form-check-input" type="radio" name="dwell_cons" id="dwell_cons" value="dwell_cons">
+					<label class="form-check-label" for="dwell_cons">Plaster</label>
+				</div>
+				<label for="name" class="col-sm-4 col-form-label text-right"> If both, % of each: </label>
+				<div class="col-sm-2">
+					<input type="text" class="form-control " id="dwell_per" value="">
+				</div>
+			</div>
+			<div class="form-group row">
+				<label for="name" class="col-sm-3 col-form-label"> Years Last Updated: </label>
+				<label for="name" class="col-sm-1 col-form-label"> <b> Wiring: </b>  </label>
+				<div class="col-sm-1">
+					<input type="number" min=0 class="form-control " id="dwell_yr_wire" value="dwell_yr_wire">
+				</div>
+
+				<label for="name" class="col-sm-1 col-form-label"> <b>Plumbing: </b> </label>
+				<div class="col-sm-1">
+					<input type="number" min=0 class="form-control" id="dwell_yr_plumb" value="dwell_yr_plumb">
+				</div>
+				<label for="name" class="col-sm-1 col-form-label">  <b> Heat: </b> </label>
+				<div class="col-sm-1">
+					<input type="number" min=0 class="form-control" id="dwell_yr_heat" value="dwell_yr_heat">
+				</div>
+				<label for="name" class="col-sm-1 col-form-label"> <b> Roof: </b> </label>
+				<div class="col-sm-1">
+					<input type="number" min=0 class="form-control" id="dwell_yr_roof" value="dwell_yr_roof">
+				</div>
+			</div>
+			<div class="form-group row">
+				<label for="name" class="col-sm-4 col-form-label">Is home 100% serviced by Circuit Breakers?</label>
+				<div class="form-check form-check-inline">
+					<input class="form-check-input" type="radio" name="dwell_circuit" id="dwell_circuit" value="dwell_circuit">
+					<label class="form-check-label" for="dwell_circuit">Yes</label>
+				</div>
+				<div class="form-check form-check-inline">
+					<input class="form-check-input" type="radio" name="dwell_circuit" id="dwell_circuit" value="dwell_circuit">
+					<label class="form-check-label" for="dwell_circuit">No</label>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="form-group row">
+					<label for="name" class="col-sm-2 col-form-label"> Primary Heat Source: </label>
+					<div class="form-check form-check-inline">
+						<input class="form-check-input" type="checkbox" name="dwell_pheat_oil" id="dwell_pheat_oil" value="dwell_pheat_oil">
+						<label class="form-check-label" for="dwell_pheat_oil">Oil</label>
+					</div>
+					<div class="form-check form-check-inline">
+						<input class="form-check-input" type="checkbox" name="dwell_pheat_natural" id="dwell_pheat_natural" value="dwell_pheat_natural">
+						<label class="form-check-label" for="dwell_pheat_natural">Natural Gas</label>
+					</div>
+					<div class="form-check form-check-inline">
+						<input class="form-check-input" type="checkbox" name="dwell_pheat_propane" id="dwell_pheat_propane" value="dwell_pheat_propane">
+						<label class="form-check-label" for="dwell_pheat_propane">Propane</label>
+					</div>
+					<div class="form-check form-check-inline">
+						<input class="form-check-input" type="checkbox" name="dwell_pheat_electric" id="dwell_pheat_electric" value="dwell_pheat_electric">
+						<label class="form-check-label" for="dwell_pheat_electric">Electric</label>
+					</div>
+					<div class="form-check form-check-inline">
+						<input class="form-check-input" type="checkbox" name="dwell_pheat_geo" id="dwell_pheat_geo" value="dwell_pheat_geo">
+						<label class="form-check-label" for="dwell_pheat_geo">Geothermal</label>
+					</div>
+					<div class="form-check form-check-inline text-right">
+						<input class="form-check-input" type="checkbox" name="dwell_pheat_other" id="dwell_pheat_other" value="dwell_pheat_other">
+						<label class="form-check-label text-right" for="dwell_pheat_other">Other:</label>
+						<input class="form-control" id="dwell_other_specify">
+					</div>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label for="name" class="col-sm-2 col-form-label"> Fireplace:</label>
+				<div class="form-check form-check-inline">
+					<input class="form-check-input" type="radio" name="dwell_fireplace" id="dwell_fireplace">
+					<label class="form-check-label" for="dwell_fireplace">Wood</label>
+				</div>
+				<div class="form-check form-check-inline">
+					<input class="form-check-input" type="radio" name="dwell_fireplace" id="dwell_fireplace" value="">
+					<label class="form-check-label" for="dwell_fireplace">Gas</label>
+				</div>
+				<div class="form-check form-check-inline">
+					<input class="form-check-input" type="radio" name="dwell_fireplace" id="dwell_fireplace" value="">
+					<label class="form-check-label" for="dwell_fireplace">Insert</label>
+				</div>
+				<div class="form-check form-check-inline">
+					<label class="form-check-label col-sm-5" for="inlineRadio2"># of Fireplaces:</label>
+					<input class="form-control col-sm-2" type="number" min=0 name="inlineRadioOptions" id="inlineRadio2" value="">
+				</div>
+			</div>
+			<div class="form-group row">
+				<label for="name" class="col-sm-3 col-form-label"> Alternate Heat Source: </label>
+				<div class="form-check form-check-inline">
+					<input class="form-check-input" type="radio" name="dwell_alt_heat" id="dwell_alt_heat" value="">
+					<label class="form-check-label" for="dwell_alt_heat">Wood Stove</label>
+				</div>
+				<div class="form-check form-check-inline">
+					<input class="form-check-input" type="radio" name="dwell_alt_heat" id="dwell_alt_heat" value="">
+					<label class="form-check-label" for="dwell_alt_heat">Pellet Stove</label>
+				</div>
+				<div class="form-check form-check-inline">
+					<input class="form-check-input" type="radio" name="dwell_alt_heat" id="dwell_alt_heat" value="">
+					<label class="form-check-label" for="dwell_alt_heat">Space Heater</label>
+				</div>
+
+				<div class="form-check form-check-inline">
+					<input class="form-check-input" type="radio" name="dwell_alt_heat" id="dwell_alt_heat" value="">
+					<label class="form-check-label text-right" for="dwell_alt_heat">Other:</label>
+					<input type="text" class="form-control col-sm-12" id="dwell_alt_heat_other">
+				</div>
+			</div>
+			<div class="form-group row">
+				<label for="name" class="col-sm-5 col-form-label"> If Wood/Pellet Stove, was it professionally installed? </label>
+				<div class="form-check form-check-inline">
+					<input class="form-check-input" type="radio" name="dwell_ins_prof" id="dwell_ins_prof" value="dwell_ins_prof">
+					<label class="form-check-label" for="dwell_ins_prof">Yes </label>
+				</div>
+				<div class="form-check form-check-inline">
+					<input class="form-check-input" type="radio" name="dwell_ins_prof" id="inlineRadio2" value="">
+					<label class="form-check-label" for="inlineRadio2">No</label>
+				</div>
+				<label for="dwell_stove_clean" class="col-sm-3 col-form-label"> Stove Cleaned annually? </label>
+				<div class="form-check form-check-inline">
+					<input class="form-check-input" type="radio" name="dwell_stove_clean" id="dwell_stove_clean" value="">
+					<label class="form-check-label" for="dwell_stove_clean">Yes</label>
+				</div>
+				<div class="form-check form-check-inline">
+					<input class="form-check-input" type="radio" name="dwell_stove_clean" id="dwell_stove_clean" value="">
+					<label class="form-check-label" for="dwell_stove_clean">No</label>
+				</div>
+
+			</div>
+			<div class="form-group row">
+				<label for="name" class="col-sm-2 col-form-label">Roof Material Type:</label>
+				<div class="form-check form-check-inline">
+					<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+					<label class="form-check-label" for="inlineRadio1">Asphalt Shingles</label>
+				</div>
+				<div class="form-check form-check-inline">
+					<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="">
+					<label class="form-check-label" for="inlineRadio2">Slate</label>
+				</div>
+				<div class="form-check form-check-inline">
+					<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="">
+					<label class="form-check-label" for="inlineRadio2">Steel/Metal</label>
+				</div>
+				<div class="form-check form-check-inline">
+					<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="">
+					<label class="form-check-label" for="inlineRadio2">Wood/Cedar Shakes</label>
+				</div>
+			</div>
+			<div class="form-group row">
+				<div class="col-sm-2"></div>
+
+				<div class="form-check form-check-inline">
+					<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="">
+					<label class="form-check-label" for="inlineRadio2">Architectural Shingles</label>
+				</div>
+				<div class="form-check form-check-inline">
+					<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="">
+					<label class="form-check-label" for="inlineRadio2">Rubber</label>
+				</div>
+				<div class="form-check form-check-inline">
+					<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="">
+					<label class="form-check-label" for="inlineRadio2">Tin</label>
+				</div>
+				<div class="form-check form-check-inline">
+					<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="">
+					<label class="form-check-label" for="inlineRadio2">Other:</label>
+					<input type="text" class="form-control" name="">
+				</div>
+			</div>
+			<div class="form-group row">
+				<label for="name" class="col-sm-2 col-form-label"> Roof Type:</label>
+				<div class="form-check form-check-inline">
+					<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+					<label class="form-check-label" for="inlineRadio1">Pitced Roof</label>
+				</div>
+				<div class="form-check form-check-inline">
+					<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="">
+					<label class="form-check-label" for="inlineRadio2">Flat Roof</label>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label for="name" class="col-sm-2 col-form-label"> Foundation Type:</label>
+				<div class="form-check form-check-inline">
+					<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+					<label class="form-check-label" for="inlineRadio1">Concrete Basement</label>
+				</div>
+				<div class="form-check form-check-inline">
+					<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="">
+					<label class="form-check-label" for="inlineRadio2">Crawl space </label>
+				</div>
+				<div class="form-check form-check-inline">
+					<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="">
+					<label class="form-check-label" for="inlineRadio2">Slab </label>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label for="name" class="col-sm-4 col-form-label"> If Basement, is it under the entire house?:</label>
+				<div class="form-check form-check-inline">
+					<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+					<label class="form-check-label" for="inlineRadio1">Yes</label>
+				</div>
+				<div class="form-check form-check-inline">
+					<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="">
+					<label class="form-check-label" for="inlineRadio2">No</label>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label for="name" class="col-sm-4 col-form-label"> If no, what % of the house is it under?</label>
+				<div class="col-sm-2">
+					<input type="text" class="form-control " id="flname" value="">
+				</div>
+				<label for="name" class="col-sm-3 col-form-label"> What % of basement is finished?</label>
+				<div class="col-sm-2">
+					<input type="text" class="form-control " id="flname" value="">
+				</div>
+			</div>
+			<div class="form-group row">
+				<label for="name" class="col-sm-2 col-form-label"> Basement is:</label>
+				<div class="form-check form-check-inline">
+					<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+					<label class="form-check-label" for="inlineRadio1">Below Grade</label>
+				</div>
+				<div class="form-check form-check-inline">
+					<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="">
+					<label class="form-check-label" for="inlineRadio2">Daylight/Walkout</label>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label for="name" class="col-sm-3 col-form-label"> Do you have a Sump Pump? </label>
+				<div class="form-check form-check-inline">
+					<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+					<label class="form-check-label" for="inlineRadio1">Yes</label>
+				</div>
+				<div class="form-check form-check-inline">
+					<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="">
+					<label class="form-check-label" for="inlineRadio2">No</label>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label for="name" class="col-sm-6 col-form-label"> If yes, what type of backup source is used if Sump Pump fails?</label>
+				<div class="form-check form-check-inline">
+					<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+					<label class="form-check-label" for="inlineRadio1">Water Powered</label>
+				</div>
+				<div class="form-check form-check-inline">
+					<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="">
+					<label class="form-check-label" for="inlineRadio2">Battery Powered</label>
+				</div>
+				<div class="form-check form-check-inline">
+					<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="">
+					<label class="form-check-label" for="inlineRadio2">Gas Generator</label>
+				</div>
+				<div class="form-check form-check-inline">
+					<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="">
+					<label class="form-check-label" for="inlineRadio2">None</label>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label for="name" class="col-sm-2 col-form-label"> Attached Structures:</label>
+				<div class="form-check form-check-inline">
+					<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+					<label class="form-check-label" for="inlineRadio1">Porch</label>
+				</div>
+				<div class="form-check form-check-inline">
+					<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="">
+					<label class="form-check-label" for="inlineRadio2">Deck</label>
+				</div>
+				<div class="form-check form-check-inline">
+					<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="">
+					<label class="form-check-label" for="inlineRadio2">Balcony</label>
+				</div>
+				<label for="name" class="col-sm-3 col-form-label"> Square Footage of each:</label>
+				<div class="col-sm-2">
+					<input type="text" class="form-control " id="flname" value="">
+				</div>
+			</div>
+			<div class="form-group row">
+				<label for="name" class="col-sm-1 col-form-label"> Garage:</label>
+				<div class="form-check form-check-inline">
+					<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+					<label class="form-check-label" for="inlineRadio1">Yes</label>
+				</div>
+				<div class="form-check form-check-inline">
+					<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="">
+					<label class="form-check-label" for="inlineRadio2">No</label>
+				</div>
+				<label for="name" class="col-sm-2 col-form-label"> If yes, Capacity #:</label>
+				<div class="col-sm-2">
+					<input type="text" class="form-control " id="flname" value="">
+				</div>
+				<div class="form-check form-check-inline">
+					<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="">
+					<label class="form-check-label" for="inlineRadio2">Attached</label>
+				</div>
+				<div class="form-check form-check-inline">
+					<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="">
+					<label class="form-check-label" for="inlineRadio2">Detached</label>
+				</div>
+				<div class="form-check form-check-inline">
+					<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="">
+					<label class="form-check-label" for="inlineRadio2">Built-In</label>
+				</div>
+				<div class="form-check form-check-inline">
+					<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="">
+					<label class="form-check-label" for="inlineRadio2">Carport</label>
+				</div>
+
+			</div>
+			<div class="form-group row">
+				<label for="name" class="col-sm-2 col-form-label"> Central Air :</label>
+				<div class="form-check form-check-inline">
+					<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+					<label class="form-check-label" for="inlineRadio1">Yes</label>
+				</div>
+				<div class="form-check form-check-inline">
+					<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="">
+					<label class="form-check-label" for="inlineRadio2">No</label>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label for="name" class="col-sm-2 col-form-label"> Bathrooms: <b> #Full:</b></label>
+				<div class="col-sm-2">
+					<input type="text" class="form-control " id="flname" value="">
+				</div>
+				<label for="name" class="col-sm-1 col-form-label text-right">  <b> #Half:</b></label>
+				<div class="col-sm-2">
+					<input type="text" class="form-control " id="flname" value="">
+				</div>
+			</div>
+			<div class="form-group row">
+				<label for="name" class="col-sm-8 col-form-label"> Customization in kitchen and/or bathrooms?(ex:grantile countertops, custom cabinetry, tile floors, etc.)</label>
+				<div class="form-check form-check-inline">
+					<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+					<label class="form-check-label" for="inlineRadio1">Yes</label>
+				</div>
+				<div class="form-check form-check-inline">
+					<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="">
+					<label class="form-check-label" for="inlineRadio2">No</label>
+				</div>
+			</div>
+			<hr>
+			<div class="title">
+				<h6> <b> PROTECTIVE DEVICES </b> (Check all that apply)</h6>
+
+			</div>
+			<div class="form-group row">
+				<label for="name" class="col-sm-2 col-form-label"> Fire Alarm:</label>
+				<div class="form-check form-check-inline">
+					<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+					<label class="form-check-label" for="inlineRadio1"><b>Local</b> (makes your household aware)</label>
+				</div>
+				<div class="form-check form-check-inline">
+					<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+					<label class="form-check-label" for="inlineRadio1"><b>Central</b> (notifies 3rd party)</label>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label for="name" class="col-sm-2 col-form-label"> Burglar Alarm:</label>
+				<div class="form-check form-check-inline">
+					<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+					<label class="form-check-label" for="inlineRadio1"><b>Local</b> (makes your household aware)</label>
+				</div>
+				<div class="form-check form-check-inline">
+					<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+					<label class="form-check-label" for="inlineRadio1"><b>Central</b> (notifies 3rd party)</label>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label for="name" class="col-sm-2 col-form-label"> Sprinkler System:</label>
+				<div class="form-check form-check-inline">
+					<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+					<label class="form-check-label" for="inlineRadio1"><b>Local</b> (makes your household aware)</label>
+				</div>
+				<div class="form-check form-check-inline">
+					<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+					<label class="form-check-label" for="inlineRadio1"><b>Central</b> (notifies 3rd party)</label>
+				</div>
+			</div>
+			<div class="form-group row">
+
+				<div class="col-sm-2 form-check form-check-inline">
+					<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+					<label class="form-check-label" for="inlineRadio1"> <b>Smoke Detectors </b></label>
+				</div>
+				<div class="col-sm-2 form-check form-check-inline">
+					<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+					<label class="form-check-label" for="inlineRadio1"><b> Fire Extinguishers </b></label>
+				</div>
+				<div class="col-sm-2 form-check form-check-inline">
+					<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+					<label class="form-check-label" for="inlineRadio1"><b> Dead Bolt Locks</b></label>
+				</div>
+			</div>
+			<hr>
+			<div class="title">
+				<h6> <b> GENERAL UNDERWRITING </b> </h6>
+
+			</div>
+			<div class="form-group row">
+				<label for="name" class="col-sm-4 col-form-label"> Do you own any dogs or exotic pets?</label>
+				<div class="form-check form-check-inline">
+					<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+					<label class="form-check-label" for="inlineRadio1">Yes</label>
+				</div>
+				<div class="form-check form-check-inline">
+					<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="">
+					<label class="form-check-label" for="inlineRadio2">No</label>
+				</div>
+				<label for="name" class="col-sm-2 col-form-label text-right"> How many:</label>
+				<div class="col-sm-1">
+					<input type="text" class="form-control " id="flname" value="">
+				</div>
+				<label for="name" class="col-sm-1 col-form-label"> Breed/Type:</label>
+				<div class="col-sm-2">
+					<input type="text" class="form-control " id="flname" value="">
+				</div>
+			</div>
+			<div class="form-group row">
+				<label for="name" class="col-sm-4 col-form-label"> Any incidents of biting? </label>
+				<div class="form-check form-check-inline">
+					<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+					<label class="form-check-label" for="inlineRadio1">Yes</label>
+				</div>
+				<div class="form-check form-check-inline">
+					<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="">
+					<label class="form-check-label" for="inlineRadio2">No</label>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label for="name" class="col-sm-6 col-form-label"> Is there a swimming pool or trampoline on the property?</label>
+			</div>
+			<div class="form-group row">
+				<div class="col-sm-4 form-check form-check-inline">
+					<input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="">
+					<label class="form-check-label" for="inlineCheckbox2"> Swimming pool</label>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="form-check form-check-inline">
+					<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="">
+					<label class="form-check-label" for="inlineRadio2">Above Ground</label>
+				</div>
+				<div class="form-check form-check-inline">
+					<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="">
+					<label class="form-check-label" for="inlineRadio2">In-ground</label>
+				</div>
+				<div class="form-check form-check-inline">
+					<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="">
+					<label class="form-check-label" for="inlineRadio2">Fenced-In</label>
+				</div>
+				<div class="form-check form-check-inline">
+					<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="">
+					<label class="form-check-label" for="inlineRadio2">Locking Gate</label>
+				</div>
+			</div>
+			<div class="form-group row">
+				<div class="col-sm-4 form-check form-check-inline">
+					<input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="">
+					<label class="form-check-label" for="inlineCheckbox2"> Trampoline</label>
+				</div>
+			</div>
+			<div class="form-group row">
+				<div class="form-check form-check-inline">
+					<div class="col-sm-2"></div>
+					<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="">
+					<label class="form-check-label" for="inlineRadio2">Screened</label>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label for="name" class="col-sm-4 col-form-label"> Do you belong to a Homeowners Association?</label>
+				<div class="form-check form-check-inline">
+					<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+					<label class="form-check-label" for="inlineRadio1">Yes</label>
+				</div>
+				<div class="form-check form-check-inline">
+					<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="">
+					<label class="form-check-label" for="inlineRadio2">No</label>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label for="name" class="col-sm-3  col-form-label"> Do you own any Watercrafts?</label>
+				<div class="form-check form-check-inline">
+					<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+					<label class="form-check-label" for="inlineRadio1">Yes</label>
+				</div>
+				<div class="form-check form-check-inline">
+					<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="">
+					<label class="form-check-label" for="inlineRadio2">No</label>
+				</div>
+				<label for="name" class="col-sm-1 col-form-label"> Type:</label>
+				<div class="col-sm-2">
+					<input type="text" class="form-control " id="flname" value="">
+				</div>
+				<label for="name" class="col-sm-2 col-form-label text-right"> Motor HP:</label>
+				<div class="col-sm-2">
+					<input type="text" class="form-control " id="flname" value="">
+				</div>
+			</div>
+			<div class="form-group row">
+				<label for="name" class="col-sm-3 col-form-label"> Docked/Stored Location:</label>
+				<div class="col-sm-2">
+					<input type="text" class="form-control " id="flname" value="">
+				</div>
+				<label for="name" class="col-sm-2  col-form-label"> Location Used:</label>
+				<div class="col-sm-2">
+					<input type="text" class="form-control " id="flname" value="">
+				</div>
+				<label for="name" class="col-sm-1 col-form-label">Length:</label>
+				<div class="col-sm-2">
+					<input type="text" class="form-control " id="flname" value="">
+				</div>
+			</div>
+			<div class="form-group row">
+				<label for="name" class="col-sm-5 col-form-label"> Any Recreational Motorized Land Vehicles:</label>
+				<div class="form-check form-check-inline">
+					<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+					<label class="form-check-label" for="inlineRadio1">Yes</label>
+				</div>
+				<div class="form-check form-check-inline">
+					<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="">
+					<label class="form-check-label" for="inlineRadio2">No</label>
+				</div>
+				<label for="name" class="col-sm-1 col-form-label"> Type:</label>
+				<div class="col-sm-2">
+					<input type="text" class="form-control " id="flname" value="">
+				</div>
+			</div>
+			<div class="form-group row">
+				<label for="name" class="col-sm-3  col-form-label"> Any Other Owned properties?</label>
+				<div class="form-check form-check-inline">
+					<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+					<label class="form-check-label" for="inlineRadio1">Yes</label>
+				</div>
+				<div class="form-check form-check-inline">
+					<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="">
+					<label class="form-check-label" for="inlineRadio2">No</label>
+				</div>
+
+				<label for="name" class="col-sm-2 col-form-label"> If yes, list address: </label>
+				<div class="col-sm-3">
+					<input type="text" class="form-control " id="flname" value="">
+				</div>
+			</div>
+			<div class="form-group row">
+				<label for="name" class="col-sm-3 col-form-label"> Member of any Board of Directors:</label>
+				<div class="form-check form-check-inline">
+					<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+					<label class="form-check-label" for="inlineRadio1">Yes</label>
+				</div>
+				<div class="form-check form-check-inline">
+					<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="">
+					<label class="form-check-label" for="inlineRadio2">No</label>
+				</div>
+
+				<label for="name" class="col-sm-2 col-form-label"> If yes, list: </label>
+				<div class="col-sm-3">
+					<input type="text" class="form-control " id="flname" value="">
+				</div>
+			</div>
+			<div class="form-group row">
+				<label for="name" class="col-sm-5 col-form-label"> Any Business Activity conducted in Home/ On Premises?</label>
+				<div class="form-check form-check-inline">
+					<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+					<label class="form-check-label" for="inlineRadio1">Yes</label>
+				</div>
+				<div class="form-check form-check-inline">
+					<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="">
+					<label class="form-check-label" for="inlineRadio2">No</label>
+				</div>
+
+				<label for="name" class="col-sm-3 col-form-label"> If yes, type of business: </label>
+				<div class="col-sm-2">
+					<input type="text" class="form-control " id="flname" value="">
+				</div>
+			</div>
+			<div class="form-group row">
+				<label for="name" class="col-sm-5  col-form-label"> Any Business Property in Home/On Premises: </label>
+				<div class="form-check form-check-inline">
+					<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+					<label class="form-check-label" for="inlineRadio1">Yes</label>
+				</div>
+				<div class="form-check form-check-inline">
+					<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="">
+					<label class="form-check-label" for="inlineRadio2">No</label>
+				</div>
+
+				<label for="name" class="col-sm-2 col-form-label"> If yes, type/amount: </label>
+				<div class="col-sm-3">
+					<input type="text" class="form-control " id="flname" value="">
+				</div>
+			</div>
+			<div class="form-group row">
+				<label for="name" class="col-sm-2 col-form-label ">Any valuable items: </label>
+
+
+				<div class="form-check form-check-inline">
+					<input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+					<label class="form-check-label" for="inlineCheckbox1"> Jewelry</label>
+				</div>
+				<div class="form-check form-check-inline">
+					<input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="">
+					<label class="form-check-label" for="inlineCheckbox2"> Fine Art</label>
+				</div>
+				<div class="form-check form-check-inline">
+					<input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="">
+					<label class="form-check-label" for="inlineCheckbox2"> Coins</label>
+				</div>
+				<div class="form-check form-check-inline">
+					<input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="">
+					<label class="form-check-label" for="inlineCheckbox2"> Guns </label>
+				</div>
+				<div class="form-check form-check-inline">
+					<input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="">
+					<label class="form-check-label" for="inlineCheckbox2"> Silverware</label>
+				</div>
+				<div class="form-check form-check-inline">
+					<input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="">
+					<label class="form-check-label" for="inlineCheckbox2"> Other: </label>
+					<input class="form-control" type="text" id="other_specify">
+				</div>
+
+				<div class="col-sm-12">
+					<label for="name" class="col-sm-12 col-form-label"> List amount of coverage needed for each category: <small><b><i>(Appraisals will be required if policy is purchased)</i></b></label>
+						<input type="text" class="form-control " id="flname" value="" placeholder="">
+					</div>
+					
+				</div>
+				<div class="form-group row">
+					<label for="name" class="col-sm-4  col-form-label">Would you like a quote for Flood coverage? </label>
+					<div class="form-check form-check-inline">
+						<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+						<label class="form-check-label" for="inlineRadio1">Yes</label>
+					</div>
+					<div class="form-check form-check-inline">
+						<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="">
+						<label class="form-check-label" for="inlineRadio2">No</label>
+					</div>
+				</div>
+				<div class="form-group row">
+					<label for="name" class="col-sm-6  col-form-label">Would you like to discuss how a Personal Umbrella Policy can benefit you? </label>
+					<div class="form-check form-check-inline">
+						<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+						<label class="form-check-label" for="inlineRadio1">Yes</label>
+					</div>
+					<div class="form-check form-check-inline">
+						<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="">
+						<label class="form-check-label" for="inlineRadio2">No</label>
+					</div>
+				</div>
+				<div class="form-group row">
+					<label for="name" class="col-sm-5  col-form-label">Would you like a quote on Life Insurance options? </label>
+					<div class="form-check form-check-inline">
+						<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+						<label class="form-check-label" for="inlineRadio1">Yes</label>
+					</div>
+					<div class="form-check form-check-inline">
+						<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="">
+						<label class="form-check-label" for="inlineRadio2">No</label>
+					</div>
+				</div>
+				<div class="mb-3">
+					<label for="validationTextarea"><i><b><u>Additional Information/Comments:</u></b></i></label>
+					<textarea class="form-control " id="add_info_general_understanding" placeholder="" ></textarea>
+				</div>
+				<button type="submit" class="btn btn-success">Submit</button>
+
+			</form>
 		</div>
-			<img id="voice" src="images/mic.png" />
-
-		<div class="buttons">
-			<button type="submit" class="btn" value="search">Google Search</button>
-			<button type="submit" class="btn" value="lucky">I'm Feeling Lucky</button>
-		</div>
-
-		<div class="lang">
-			Google offered in: <a href="#">नेपाली</a>
-		</div>
-
-	</form>
-
-	</main>
-	<footer>
-		<ul>
-			<li><a href="#" class="bottom">Nepal</a></li>
-		</ul>
-		<br />
-		<ul class="left">
-			<li><a href="#" class="bottom">Advertising</a></li>
-			<li><a href="#" class="bottom">Business</a></li>
-			<li><a href="#" class="bottom">About</a></li>
-		</ul>
-		<ul class=right>
-			<li><a href="#" class="bottom">Privacy</a></li>
-			<li><a href="#" class="bottom">Terms</a></li>
-			<li><a href="#" class="bottom">Settings</a></li>
-		</ul>
-	</footer>
-</body>
-</html>
+	</body>
+	</html>
