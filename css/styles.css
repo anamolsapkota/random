@@ -23,7 +23,7 @@ hr {
     color: #E0E0E0;
 }
 
-.card {
+#card-signin {
     text-align: center;
     padding-left: 10%;
     padding-right: 10%;
@@ -46,4 +46,39 @@ hr {
 .btn-outline-secondary:hover {
     background-color: #ffffff;
     color: #868686
+}
+
+a {
+    text-decoration: none;
+}
+
+.text {
+    margin-top: 10px;
+    width: 92%;
+    display: inline-block;
+}
+
+h2 {
+    text-align: center;
+}
+
+.exit {
+    position: fixed;
+    float: right;
+    top: 2;
+    /*padding-left: 86%;*/
+    z-index: 999;
+}
+
+#invite {
+    background-color: #F4F8FE;
+    width: 100%;
+    height: 10%;
+    border-color: color: #308CD4;
+    text-align: center;
+}
+
+.fa-paper-plane {
+    font-size: 22px;
+    color: #308CD4;
 }
