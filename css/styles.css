@@ -54,7 +54,7 @@ a {
 
 .text {
     margin-top: 10px;
-    width: 92%;
+    width: 90%;
     display: inline-block;
 }
 
@@ -64,15 +64,16 @@ h2 {
 
 .exit {
     position: fixed;
-    float: right;
-    top: 2;
-    /*padding-left: 86%;*/
+    float: right !important;
+    padding-left: 86%;
+    top: 3;
     z-index: 999;
+    text-decoration: none;
 }
 
 #invite {
     background-color: #F4F8FE;
-    width: 100%;
+    width: 80%;
     height: 10%;
     border-color: color: #308CD4;
     text-align: center;
@@ -81,4 +82,12 @@ h2 {
 .fa-paper-plane {
     font-size: 22px;
     color: #308CD4;
+}
+
+a:hover{
+    text-decoration: none;
+}
+
+.exit a {
+    color: black;
 }
