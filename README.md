@@ -1,3 +1,0 @@
-# iwacademy
-
-IW Academy

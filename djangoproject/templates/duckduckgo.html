@@ -1,0 +1,81 @@
+{%  load static %}
+<html>
+<head>
+	<title>DuckDuckGo — Privacy, simplified.</title>
+
+	<link rel="shortcut icon" href="{%  static "duckduckgo/favicon.ico" %}" type="image/x-icon" sizes="16x16 32x32" />
+	<link rel="stylesheet" href="{%  static "duckduckgo/css/bootstrap.min.css" %}" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="{% static "duckduckgo/css/styles.css" %}" />
+
+</head>
+<body>
+<div class="container">
+	<div class="row">
+		<div class="col-md-4"></div>
+		<div class="col-md-4"></div>
+		<div class="col-md-4">
+			<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle text-muted" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Privacy, simplified.
+        </a>
+      </li>
+      <li>&nbsp;&nbsp;&nbsp;&nbsp;</li>
+      <li>
+      	<a class="nav-link dropdown-toggle text-muted" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-twitter"></i></a>
+      </li>
+    </ul>
+  </div>
+</nav>
+		</div>
+</div>
+
+	</div>
+
+	<div class="col-md-12 space"></div>
+
+	<div class="row">
+		<div class="col-md-5"></div>
+		<div class="col-md-2"><img src="{% static "duckduckgo/images/duckduckgo_logo.png" %}" height=240px width=300px /></div>
+		<div class="col-md-5"></div>
+	</div>
+
+	<div class="col-md-12 space"></div>
+
+	<div class="row">
+		<div class="col-md-4"></div>
+		<div class="col-md-4">
+
+				<div class="input-group mb-3">
+					<input type="text" class="form-control" id="searchtxt" onkeyup="displaytxt()"/>
+					<div class="input-group-append">
+						<button class="btn btn-outline-secondary" onclick="alerttext()" type="submit"><i class="fa fa-search"></i></span>
+					</div>
+				</div>
+
+		</div>
+		<div class="col-md-4" id="test"></div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-12">
+			<p align="center"><span class="text-muted hidden">The search engine that doesn't track you. <a href="#">Help Spread DuckDuckGo!</a></span></p>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-5"></div>
+		<div class="col-md-2"><img src="{% static "duckduckgo/images/bottom.png" %}"></div>
+		<div class="col-md-5"></div>
+	</div>
+		<script type="text/javascript" src="{% static "duckduckgo/js/javascript.js" %}"></script>
+
+</body>
+</html>
